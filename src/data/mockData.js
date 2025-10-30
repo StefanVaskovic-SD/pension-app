@@ -79,3 +79,5 @@ export const quickActions = [
   { id: 4, name: 'Top up', icon: '⬆️' },
   { id: 5, name: 'Withdraw', icon: '⬇️' },
 ];
+
+

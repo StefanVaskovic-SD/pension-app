@@ -12,7 +12,7 @@ import TransactionsIcon from '../components/icons/TransactionsIcon';
 import { learningResources, promotions } from '../data/mockData';
 import { theme } from '../styles/theme';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
@@ -31,7 +31,7 @@ export default function HomeScreen() {
         </View>
 
         {/* Current Account Card - BLACK TEXT */}
-        <TouchableOpacity style={[styles.card, { backgroundColor: '#FFB800' }]} activeOpacity={0.9}>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#FFB800' }]} activeOpacity={0.9} onPress={() => navigation.navigate('AccountDetail', { account: accounts[0] })}>
           <View style={styles.cardTop}>
             <View style={styles.cardLeft}>
               <Text style={[styles.accountName, { color: '#000' }]}>Current Account</Text>
@@ -52,7 +52,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
 
         {/* Savings Account Card - BLACK TEXT */}
-        <TouchableOpacity style={[styles.card, { backgroundColor: '#8B7BFF' }]} activeOpacity={0.9}>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#8B7BFF' }]} activeOpacity={0.9} onPress={() => navigation.navigate('AccountDetail', { account: accounts[1] })}>
           <View style={styles.cardTop}>
             <View style={styles.cardLeft}>
               <Text style={[styles.accountName, { color: '#000' }]}>Savings</Text>
@@ -73,7 +73,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
 
         {/* Pension Card - WHITE TEXT */}
-        <TouchableOpacity style={[styles.card, { backgroundColor: '#2A2A2A' }]} activeOpacity={0.9}>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#2A2A2A' }]} activeOpacity={0.9} onPress={() => navigation.navigate('AccountDetail', { account: accounts[2] })}>
           <View style={styles.cardTop}>
             <View style={styles.cardLeft}>
               <Text style={[styles.accountName, { color: '#FFF' }]}>Pension</Text>

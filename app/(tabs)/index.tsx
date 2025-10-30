@@ -1,3 +1,3 @@
-import HomeScreen from '../../src/screens/HomeScreen';
+import AppNavigator from '../../src/navigation/AppNavigator';
 
-export default HomeScreen;
+export default AppNavigator;
